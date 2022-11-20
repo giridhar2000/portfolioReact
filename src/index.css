@@ -8,6 +8,11 @@ body {
   scroll-behavior: smooth;
   background-color: #F5F8FF;
   color: #1F276F;
+  --lightBlue: #C1E3FD;
+  --purple: #8B7FFE;
+  --bluewhite: #F5F8FF;
+  --textliack: #4C4646;
+
 }
 
 code {
