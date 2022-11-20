@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './Components/About';
+import Home from './Components/Home';
+import Navbar from './Components/NavgationBar';
+import Profile from './Components/Profile';
+import Projects from './Components/Projects';
+import ScrollToTop from "react-scroll-to-top";
+import Footer from './Components/Footer';
+
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar />
+        <Home />
+        </header>
+        <About />
+        <Profile />
+        <Projects />
+        <Footer />
     </div>
   );
 }

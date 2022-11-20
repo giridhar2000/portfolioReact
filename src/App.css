@@ -1,5 +1,14 @@
+@font-face {
+  font-family: Ginger;
+  src: url(../src/Styles/fonts/f37ginger-regular-webfont.ttf);
+}
+
 .App {
+  --primary_color: #334ac0;
   text-align: center;
+  font-family: Ginger;
+  color: #8B7FFE;
+
 }
 
 .App-logo {
@@ -7,32 +16,223 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background: url('./bg3.svg');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #1F276F;
 }
 
-.App-link {
-  color: #61dafb;
+
+a.nav-link{
+  color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.AppNav{
+  align-items: center;
+  font-size: large;
+}
+
+.AppNav a:hover{
+  color: #8B7FFE;
+}
+
+.btn{
+  height: 2rem;
+  padding: 0;
+    width: 9%;
+    color: whitesmoke;
+    border: #334ac0;
+    background-color: #334ac0;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn:focus{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+}
+
+a.nav-link {
+  margin-inline: 50px;
+}
+
+.offcanvas-body {
+  align-items: center;
+}
+
+.pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid rgba(0,0,0,0.3);
+}
+
+.column {
+  vertical-align: center;
+  width: 40%;
+  padding: 10px;
+  color: #4C4646;
+}
+
+.column.left {
+  width: 17%;
+}
+
+.column.right {
+  width: 75%;
+}
+
+table{
+  border-collapse: separate;
+  border-spacing: 40px 0px;
+  font-size: x-large;
+}
+
+.heading{
+  position: relative;
+  left: 62vh;
+  bottom: 5vh;
+}
+
+.profile{
+  position: relative;
+  top: 20vh;
+  color: #4C4646;
+  font-size: xx-large;
+}
+
+.fa{
+  color: #4C4646;
+  padding-left: 20vh;
+}
+
+.head{
+  margin-left: 8vh;
+}
+
+
+.pb{
+  width: 25%;
+  --bs-progress-bar-bg: #1F276F;
+}
+
+.row{
+  width: 100%;
+  margin-top: 5vh;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.navibar{
+  top: 0;
+  background-color: #1F276F;
+  box-shadow: rgb(31 39 111 / 40%) 0px 5px, rgb(31 39 111 / 30%) 0px 10px, rgb(31 39 111 / 20%) 0px 15px, rgb(31 39 111 / 10%) 0px 20px, rgb(31 39 111 / 5%) 0px 25px;
+}
+
+.projects{
+  position: relative;
+  top: 25vh;
+  color: #C1E3FD;
+  margin-left: 8vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects .card1{
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.projects .card1 .face{
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.projects .card1 .face.face1{
+  position: relative;
+  background: #1F276F;
+  color: #C1E3FD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+  border-radius: 10px;
+}
+
+.projects .card1:hover .face.face1{
+  background: #C1E3FD;
+  color: #1F276F;
+  transform: translateY(0);
+}
+
+.projects .card1 .face.face1 .content{
+  opacity: 0.2;
+  transition: 0.5s;
+  
+}
+
+.projects .card1:hover .face.face1 .content{
+  opacity: 1;
+  
+}
+
+.projects .card1 .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #C1E3FD;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.projects .card1 .face.face2{
+  position: relative;
+  background: #C1E3FD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: translateY(-100px);
+  border-radius: 10px;
+}
+
+.projects .card1:hover .face.face2{
+  transform: translateY(0);
+}
+
+.projects .card1 .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+}
+
+.projects .card1 .face.face2 .content a{
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 800;
+  color: #1F276F;
+  padding: 5px;
+  border: 1px solid #1F276F;
+}
+
+.projects .card1 .face.face2 .content a:hover{
+  background: #1F276F;
+  color: #C1E3FD;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  
+}
+
+.fa{
+  cursor: pointer;
 }
